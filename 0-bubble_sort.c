@@ -2,7 +2,7 @@
 
 /**
  * bubble_sort - sort an unsorted array slowly
- * @*array: int param
+ * @array: int param
  * @size: size_t param
  * Return: nothing
  */
