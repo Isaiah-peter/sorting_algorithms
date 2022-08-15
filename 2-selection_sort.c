@@ -4,7 +4,7 @@
  * selection_sort - sort an array
  * @array: first param
  * @size: second param
- * @Return: nothing
+ * Return: nothing
  */
 
 void selection_sort(int *array, size_t size)
