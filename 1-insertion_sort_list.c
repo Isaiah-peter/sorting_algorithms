@@ -1,5 +1,23 @@
 #include "sort.h"
 /**
+ * swapper - a function to help swap 2 nodes in a dlist
+ * @a: one node
+ * @b: the other node
+ *
+ */
+void swapper(listint_t *a, listint_t *b)
+{
+        if (a->prev)
+                a->prev->next = b;
+        if (b->next)
+                b->next->prev = a;
+        a->next = b->next;
+        b->prev = a->prev;
+        a->prev = b;
+        b->next = a;
+}
+
+/**
  * insertion_sort_list - sort a dlist via insertion sort
  * @list: the list to sort
  *
@@ -36,23 +54,4 @@ void insertion_sort_list(listint_t **list)
 		}
 	}
 
-}
-
-
-/**
- * swapper - a function to help swap 2 nodes in a dlist
- * @a: one node
- * @b: the other node
- *
- */
-void swapper(listint_t *a, listint_t *b)
-{
-	if (a->prev)
-		a->prev->next = b;
-	if (b->next)
-		b->next->prev = a;
-	a->next = b->next;
-	b->prev = a->prev;
-	a->prev = b;
-	b->next = a;
 }
