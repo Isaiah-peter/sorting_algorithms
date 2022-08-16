@@ -28,23 +28,23 @@ void swaps(int *array, size_t size, int *a, int *b)
 
 size_t partition(int *array, size_t size, ssize_t low, ssize_t high)
 {
-        /*declarations */
-        int i, j, pivot;
+	/*declarations */
+	int i, j, pivot;
 
-        /* set the pivot */
-        pivot = array[high];
+	/* set the pivot */
+	pivot = array[high];
 
-        for (j = low, i = j; j < high; j++)
-        {
-                if (array[j] < pivot)
-                {
-                        swaps(array, size, &array[j], &array[i++]);
-                }
-        }
-        /* final swap */
-        swaps(array, size, &array[i], &array[high]);
-        /* the size_t return value here is needed for the part */
-        return (i);
+	for (j = low, i = j; j < high; j++)
+	{
+		if (array[j] < pivot)
+		{
+			swaps(array, size, &array[j], &array[i++]);
+		}
+	}
+	/* final swap */
+	swaps(array, size, &array[i], &array[high]);
+	/* the size_t return value here is needed for the part */
+	return (i);
 }
 /**
  * kwiksort - quick sort via lamuto partition
